@@ -245,7 +245,7 @@
 					
 					
 		&trans &trans &trans &trans &kp LEFT &kp DOWN  &kp UP &kp RIGHT
-		&to AL1 &AL1 &none &none
+		&to AL1 &to AL1 &none &none
 		        >;
 		};
 	};
