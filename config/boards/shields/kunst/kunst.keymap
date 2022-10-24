@@ -30,6 +30,7 @@
 #define BT 6	
 #define AL2U 7
 #define IMG 8
+#define NAV 9
 / { 
 	combos {
 		compatible = "zmk,combos";
@@ -53,6 +54,11 @@
                         timeout-ms = <30>;
 	                key-positions = <9 10>;
                         bindings = <&kp RET>;
+                };
+		combo_nav {
+                        timeout-ms = <30>;
+	                key-positions = <6 13>;
+                        bindings = <&to NAV>;
                 };
 		lalt {
 			timeout-ms = <20>;
@@ -232,5 +238,13 @@
 							&kp SPC		&to AL1						&none	&none
 			>;
 		};
+		
+		nav {
+		        bindings = <
+			                                &trans           &trans      &trans       &trans &trans &trans
+					
+					
+		&trans &trans &trans &trans &kp LEFT &kp DOWN  &kp UP &kp RIGHT
+		&to AL1 &AL1 &none &none
 	};
 };
