@@ -31,6 +31,7 @@
 #define AL2U 7
 #define IMG 8
 #define NAV 9
+#define M8 10
 / { 
 	combos {
 		compatible = "zmk,combos";
@@ -59,6 +60,11 @@
                         timeout-ms = <30>;
 	                key-positions = <6 13>;
                         bindings = <&to NAV>;
+                };
+		combo_m8 {
+                        timeout-ms = <30>;
+	                key-positions = <0 1 2>;
+                        bindings = <&to M8>;
                 };
 		lalt {
 			timeout-ms = <20>;
@@ -247,6 +253,14 @@
 		&trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LEFT &kp DOWN  &kp UP &kp RIGHT
 		&to AL1 &to AL1 &none &none
 		        >;
+		};
+		
+		m8 {
+			bindings = <
+							&kp LCTL	&kp LALT	&kp LGUI		&none	&kp UP	&kp BKSP
+				&kp LSHIFT  &kp Z 	&kp Z		&kp X			&kp LEFT &kp DOWN	&kp RIGHT	&kp RET
+							&kp SPC		&to AL1						&none	&none
+			>;
 		};
 	};
 };
